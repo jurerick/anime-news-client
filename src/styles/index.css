@@ -1,0 +1,69 @@
+@import "~antd/dist/antd.css";
+@import url(https://fonts.googleapis.com/css?family=Sacramento);
+
+.ant-layout {
+    background: none;
+}
+
+.default-layout {
+    width: 1200px;
+    padding: 1em;
+    margin: auto;
+}
+
+.ant-list-pagination {
+    padding-bottom: 20px;
+}
+
+.app-header {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 2px 8px #f0f1f2;
+}
+.app-header__logo-search-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.app-header__search-input {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-right: 10px;
+}
+.app-header__search-input .ant-input-group {
+    border: 0;
+    width: 100%;
+    max-width: 460px;
+}
+.app-header__search-input .ant-input-group input {
+    border: 1px solid #f0f1f2;
+    box-shadow: 0 2px 4px rgba(29, 34, 108, 0.1);
+}
+.app-header__menu-section {
+    float: right;
+}
+.app-header__menu-section > ul{ border: none; }
+
+.home-skeleton .home-skeleton__news-img {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 200px;
+}
+
+.home .news-card {
+    min-height: 385px;
+}
+
+.home .news-card .ant-card-body {
+    min-height: 218px;
+}
+
+.home .news-card__news-image {
+    height: 200px;
+    background-size: cover;
+}
+
+.home-skeleton {
+    padding: 5em 0;
+}
