@@ -47,7 +47,6 @@ export const MockNews = () => {
 
     return (
       <Content className="default-layout home">
-
         <Alert banner
           message="You are visiting Anime News with a mock data."
           description="Pagination feature will not work as expected, and 'popular' menu is disabled. But you can still like an article."
