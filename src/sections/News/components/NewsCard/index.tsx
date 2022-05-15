@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Skeleton, Typography } from "antd";
 import { NewsItem } from "../../../../lib/graphql/queries/News/types";
-import { ExportOutlined, LikeFilled, LikeOutlined } from "@ant-design/icons";
+import { ExportOutlined, LikeFilled, LikeOutlined, LikeTwoTone } from "@ant-design/icons";
 
 const { Title } = Typography;
 const { Meta } = Card;
@@ -15,9 +15,10 @@ interface Props {
     upvote: boolean,
     publishedAt: string
   ) => void;
+  showVotes: boolean;
 }
 
-export const NewsCard = ({ newsItem, handleNewsVote }: Props) => {
+export const NewsCard = ({ newsItem, handleNewsVote, showVotes }: Props) => {
 
     const [ hasVoted, setHasVoted ] = useState(false);
 
@@ -35,24 +36,37 @@ export const NewsCard = ({ newsItem, handleNewsVote }: Props) => {
             return status;
         });
     }
+
+    let voteIcon;
+
+    if(showVotes === true) {
+        voteIcon = (
+            <span className="news-card__likes-display">
+                Likes <strong>{newsItem.voteCount}</strong>
+            </span>
+        );
+    }
+    else {
+        voteIcon = hasVoted === false ? (
+            <LikeOutlined
+                style={{ color: '#ed6c21' }} 
+                onClick={() =>
+                    submitVote()
+                }
+                key="vote"
+            />
+          ) : (
+            <LikeFilled
+                style={{ color: '#f9650f' }} 
+                onClick={() =>
+                    submitVote()
+                }
+                key="unvote"
+            />
+          );
+    }
     
-    const voteIcon = hasVoted === false ? (
-        <LikeOutlined
-            style={{ color: '#ed6c21' }} 
-            onClick={() =>
-                submitVote()
-            }
-            key="vote"
-        />
-      ) : (
-        <LikeFilled
-            style={{ color: '#f9650f' }} 
-            onClick={() =>
-                submitVote()
-            }
-            key="unvote"
-        />
-      );
+    
 
     
     const photoElement = (newsItem.urlToImage && newsItem.urlToImage !== "") ? (

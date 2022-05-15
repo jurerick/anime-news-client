@@ -11,9 +11,9 @@ export const NEWS = gql`
 `;
 
 export const NEWS_POPULAR = gql`
-  query NewsPopular ($page: Int, $limit: Int) {
-    newsPopular (page: $page, limit: $limit)
-      @rest(type: "News", path: "news/popular/page/{args.page}/limit/{args.limit}") {
+  query NewsPopular ($page: Int, $limit: Int, $sort: String) {
+    newsPopular (page: $page, limit: $limit, sort: $sort)
+      @rest(type: "News", path: "news/popular/page/{args.page}/limit/{args.limit}/{args.sort}") {
       total
       result
     }

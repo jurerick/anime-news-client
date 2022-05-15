@@ -51,19 +51,23 @@
     height: 200px;
 }
 
-.home .news-card {
+.home-skeleton {
+    padding: 5em 0;
+}
+
+.news-card {
     min-height: 385px;
 }
 
-.home .news-card .ant-card-body {
+.news-card .ant-card-body {
     min-height: 218px;
 }
 
-.home .news-card__news-image {
+.news-card__news-image {
     height: 200px;
     background-size: cover;
 }
 
-.home-skeleton {
-    padding: 5em 0;
+.news-card__likes-display {
+    cursor: default;
 }

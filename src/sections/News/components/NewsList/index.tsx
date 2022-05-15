@@ -24,6 +24,7 @@ interface Props {
     pageSize: number;
     setNewsPage: (page: number) => void;
     setNewsPageSize: (pageSize: number) => void;
+    showVotes: boolean;
 }
 
 export const NewsList = ({
@@ -31,7 +32,8 @@ export const NewsList = ({
   page,
   pageSize,
   setNewsPage,
-  setNewsPageSize
+  setNewsPageSize,
+  showVotes
 }: Props) => {
 
   const navigate = useNavigate();
@@ -119,7 +121,11 @@ export const NewsList = ({
         dataSource={data.result}
         renderItem={(item, index) => (
           <List.Item>
-            <NewsCard newsItem={item} handleNewsVote={ handleNewsVote } />
+            <NewsCard 
+              newsItem={item} 
+              handleNewsVote={ handleNewsVote } 
+              showVotes={showVotes} 
+            />
           </List.Item>
         )}
       />

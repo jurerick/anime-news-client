@@ -34,9 +34,9 @@ export const Home = () => {
     }
 
     const renderNewsElement = () => {
-        if(loading) {
+         if(loading) {
             return <HomeSkeleton />
-        }
+         }
 
         if(data) {
             return (
@@ -46,6 +46,7 @@ export const Home = () => {
                 pageSize={newsPageSize}
                 setNewsPage={setNewsPage}
                 setNewsPageSize={setNewsPageSize}
+                showVotes={false}
               />
             );
         }

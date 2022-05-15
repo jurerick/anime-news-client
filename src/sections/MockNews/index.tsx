@@ -39,6 +39,7 @@ export const MockNews = () => {
                 pageSize={newsPageSize}
                 setNewsPage={setNewsPage}
                 setNewsPageSize={setNewsPageSize}
+                showVotes={false}
               />
             );
         }

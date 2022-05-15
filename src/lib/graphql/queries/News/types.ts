@@ -35,4 +35,5 @@ export interface MockNews {
 export interface NewsVariables {
     page: number;
     limit: number;
+    sort?: string;
 }
