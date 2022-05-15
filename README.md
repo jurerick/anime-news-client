@@ -26,7 +26,7 @@ npm install
 ```
 
 ### .env
-Create ```.env``` file in the root of your project and add variable REACT_APP_SERVER_API_URL to it.
+Create ```.env``` file in the root of your project and add variable ```REACT_APP_SERVER_API_URL``` to it.
 ```sh
 REACT_APP_SERVER_API_URL=http://localhost/api/
 ```
@@ -39,7 +39,7 @@ This project was bootstrapped with [Create React App](https://create-react-app.d
 npm start
 ```
 This will run the app in the development mode. 
-Open http://localhost:3000 to view it in your browser.
+Open ```http://localhost:3000``` to view it in your browser.
 
 The page will reload when you make changes in code.
 You may also see any lint errors in the console.
