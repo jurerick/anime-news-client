@@ -6,15 +6,15 @@ Anime News is a web app that showcase news regarding anime.
   - Shows anime news from blogs accross the web. 
   - Ranking news popularity by allowing users to like news item.
 
-### Tech stack
+## Tech stack
 - React
 - Laravel 
 - Mysql
 - Ant Design
 
-### Get Started
+## Get Started
 
-#### git clone
+### git clone
 Clone the repository by typing in your terminal: 
 ```sh
 git clone https://github.com/jurerick/anime-news-client.git
@@ -26,7 +26,7 @@ Install all the dependencies. In the project directory, you can run:
 npm install
 ```
 
-#### npm start
+### npm start
 This project was bootstrapped with [Create React App](https://create-react-app.dev/). In the same project directory run:
 ```sh
 npm start
@@ -38,14 +38,14 @@ The page will reload when you make changes in code.
 You may also see any lint errors in the console.
 
 
-### Todos
+## Todos
 
  - Write unit tests
  - User authentication
  - Search news feature
  - News detail page
 
-License
+### License
 ----
 
 MIT
