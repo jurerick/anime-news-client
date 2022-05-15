@@ -1,7 +1,5 @@
 # Anime News Client
 
-Powered by Create React App
-[![N|Create React App](https://create-react-app.dev/img/favicon/favicon.ico)](https://create-react-app.dev/)
 Anime News is a web app that showcase news regarding anime.
 
 ## Features
