@@ -1,16 +1,11 @@
 # Anime News Client
 
-Anime News is a web app that showcase news regarding anime.
+**Anime News Client** is the frontend web app for **Anime News** project.
+This is the client side of the [**Anime News Server**](https://github.com/jurerick/anime-news-server) api application.
 
 ## Features
   - Shows anime news from blogs accross the web. 
   - Ranking news popularity by allowing users to like news item.
-
-## Tech stack
-- React
-- Laravel 
-- Mysql
-- Ant Design
 
 ## Get Started
 
@@ -46,7 +41,6 @@ You may also see any lint errors in the console.
  - News detail page
 
 ### License
-----
 
 MIT
 
