@@ -10,20 +10,21 @@ import { useNavigate } from "react-router-dom";
 const { TabPane } = Tabs; 
 const { Content } = Layout;
 
-const PAGE_LIMIT = 15;
+const PAGE_LIMIT = 100;
 
 export const News = () => {
 
     const navigate = useNavigate();
 
-    const [ popularNewsPage, setPopularNewsNewsPage ] = useState(1);
+    const [ popularNewsPage, setPopularNewsPage ] = useState(1);
     const [ popularNewsPageSize, setPopularNewsPageSize ] = useState(PAGE_LIMIT);
 
     const { data, loading } = useQuery<NewsPopularData, NewsVariables>(NEWS_POPULAR, {
         variables: {
             page: popularNewsPage,
             limit: popularNewsPageSize
-        }
+        },
+        fetchPolicy: "cache-and-network"
     });
 
     const handleTabChange = (key: string) => {
@@ -34,16 +35,18 @@ export const News = () => {
 
 
     const renderNewsElement = () => {
+
         if(loading) {
             return <HomeSkeleton />
         }
+
         if(data) {
             return (
               <NewsList
                 data={data.newsPopular}
                 page={popularNewsPage}
                 pageSize={popularNewsPageSize}
-                setNewsPage={setPopularNewsNewsPage}
+                setNewsPage={setPopularNewsPage}
                 setNewsPageSize={setPopularNewsPageSize}
               />
             );

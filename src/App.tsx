@@ -24,7 +24,7 @@ export const App = () => {
           <Col span={12}><Text strong>Anime News</Text> © 2022</Col>
           <Col span={12}>
             <div style={{textAlign: "right"}}>
-              This website is created by {" "} <Link href="https://github.com/jurerick" target="_blank">Jur Erick Porras</Link> 
+              This app is created by {" "} <Link href="https://github.com/jurerick" target="_blank">Jur Erick Porras</Link> 
               {" "} and is for demo purpose only.
             </div>
           </Col>

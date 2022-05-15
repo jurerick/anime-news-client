@@ -2,7 +2,7 @@
 import { useMutation } from "@apollo/client";
 import { Button, List, Result, Typography } from "antd";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NewsList as NewsListData } from "../../../../lib/graphql/queries/News/types";
 import { displayErrorMessage } from "../../../../lib/utils";
 import {
@@ -16,7 +16,7 @@ import { NewsCard } from "../NewsCard";
 import { CREATE_VOTE, UPDATE_VOTE } from "../../../../lib/graphql/mutations";
 import { ReloadOutlined } from "@ant-design/icons";
 
-const { Text, Paragraph } = Typography;
+const { Text, Title, Paragraph } = Typography;
 
 interface Props {
     data: NewsListData | null;
@@ -141,9 +141,10 @@ export const NewsList = ({
           <div>
             <div style={{marginBottom: "1em"}}>
               <Paragraph>
+                <Title level={5}>You have requested too many results</Title>
                 This website is using the <Text mark><a href="https://newsapi.org/" target="_blank" rel="noreferrer">News API</a></Text> {" "}
-                with a developer account subscription. Developer accounts are limited to a max of 100 results per day. 
-                <br />Please wait for 12 to 24 hours for resetting API requests.
+                with a developer account subscription. Developer accounts are limited to a max of <Text mark>100 results</Text> or <Text mark>100 requests per day</Text>. 
+                <br />You may reload the page and see if the issue will be fixed. If not, please wait for 12 to 24 hours for resetting API requests.
               </Paragraph>
               <Paragraph>
                 If you want to continue exploring the news using a mock data, please visit mock news page. 

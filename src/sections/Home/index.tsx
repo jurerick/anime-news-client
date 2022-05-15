@@ -37,6 +37,7 @@ export const Home = () => {
         if(loading) {
             return <HomeSkeleton />
         }
+
         if(data) {
             return (
               <NewsList
